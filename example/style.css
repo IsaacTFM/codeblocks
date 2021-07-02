@@ -1,0 +1,37 @@
+.codeblock {
+	border-color:#d1d1d1;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 3px;
+
+	background: #f1f1f1;
+
+	max-width: 500px;
+	counter-reset: custom-counter;
+}
+
+.codeblock > p {
+	display: table;
+	font-family: "Courier New"; 
+	font-size: 14px;
+	
+	color: #747474;
+
+	margin-bottom: 3px;
+	margin-top: 2px;
+	
+	margin-left: 27px;
+}
+
+.codeblock > p:before {
+	counter-increment: custom-counter+1;
+	content: counter(custom-counter)"";
+
+	position: absolute;
+	margin-left: -25px;
+	width: 20px;
+
+
+	display: table-cell;
+	color: rgb(163, 163, 163);
+}
